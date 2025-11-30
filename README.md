@@ -28,8 +28,8 @@ WXTフレームワークとReactを使用して構築されています。
 
 この拡張機能はChromeウェブストアには公開されていません。
 
-1. [Releasesページ](https://github.com/ptsorange/image-translate-chrome-extension/dist) から最新の `.zip` ファイル（例: `image-translate-chrome-extension-x.x.x.zip`）をダウンロードしてください。
-[ダウンロード](https://github.com/ptsorange/image-translate-chrome-extension/dist)
+1. [Releasesページ](https://github.com/ptsorange/image-translate-chrome-extension/dist) から最新の `.zip` ファイル（例: `image-translate-chrome-extension-x.x.x.zip`）をダウンロードしてください。<br/>
+[ダウンロード](https://github.com/ptsorange/image-translate-chrome-extension/tree/main/dist)
 2. ダウンロードしたファイルを解凍します。
 3. Chromeで `chrome://extensions/` を開きます。
 4. 右上の「デベロッパーモード」をONにします。
