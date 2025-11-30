@@ -1,4 +1,6 @@
-![Icon](/public/READMEIcon.png)
+<p align="center">
+   <img src="/public/READMEIcon.png" alt="Icon" />
+</p>
 
 [![WXT](https://img.shields.io/badge/WXT-Framework-4CAF50?style=for-the-badge)](https://wxt.dev/)
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
