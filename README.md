@@ -1,5 +1,5 @@
 <p align="center">
-   <img src="/public/READMEIcon.png" alt="Icon" />
+   <img width="200" src="/public/READMEIcon.png" alt="Icon" />
 </p>
 
 [![WXT](https://img.shields.io/badge/WXT-Framework-4CAF50?style=for-the-badge)](https://wxt.dev/)
