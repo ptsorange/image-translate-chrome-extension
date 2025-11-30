@@ -7,6 +7,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Tesseract.js](https://img.shields.io/badge/Tesseract.js-OCR-blue?style=for-the-badge)](https://tesseract.projectnaptha.com/)
 [![Translate](https://img.shields.io/badge/Translate-npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/package/translate)
+
 # 🖼️ Image Translate Chrome Extension
 
 画像内のテキストを認識（OCR）し、自動的に日本語へ翻訳するChrome拡張機能です。
@@ -22,6 +23,17 @@ WXTフレームワークとReactを使用して構築されています。
 - 🌐 **翻訳**: 抽出したテキストや入力したテキストを自動的に日本語に翻訳して表示します。
 - 📖 **辞書検索**: 気になる英単語をWeblio辞書ですぐに検索できます。
 - 🖱️ **選択テキスト翻訳**: Webページ上のテキストを選択すると表示されるボタンから、直接翻訳を実行できます。
+
+## 📥 ダウンロードとインストール
+
+この拡張機能はChromeウェブストアには公開されていません。
+
+1. [Releasesページ](https://github.com/ptsorange/image-translate-chrome-extension/dist) から最新の `.zip` ファイル（例: `image-translate-chrome-extension-x.x.x.zip`）をダウンロードしてください。
+[ダウンロード](https://github.com/ptsorange/image-translate-chrome-extension/dist)
+2. ダウンロードしたファイルを解凍します。
+3. Chromeで `chrome://extensions/` を開きます。
+4. 右上の「デベロッパーモード」をONにします。
+5. 「パッケージ化されていない拡張機能を読み込む」をクリックし、解凍したフォルダを選択します。
 
 ## 🚀 開発の始め方
 
