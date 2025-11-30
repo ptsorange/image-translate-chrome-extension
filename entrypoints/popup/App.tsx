@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, use } from "react";
 import { createWorker } from "tesseract.js";
 import translate from "translate";
 import "./App.css";
@@ -7,6 +7,29 @@ export default function App() {
   const [text, setText] = useState("");
   const [words, setWords] = useState("");
   translate.engine = "google";
+
+  useEffect(() => {
+    const loadSelectedText = async () => {
+      const result = await browser.storage.local.get("selectedText");
+      if (result.selectedText) {
+        const contentEditable = document.getElementById("contentEditable");
+        if (contentEditable) {
+          contentEditable.innerText = result.selectedText;
+          setText("Processing...");
+          try {
+            const translated = await translater("ja", result.selectedText);
+            setText(translated);
+            setWords(result.selectedText);
+          } catch (err) {
+            setText(String(err));
+          }
+
+          await browser.storage.local.remove("selectedText");
+        }
+      }
+    };
+    loadSelectedText();
+  }, []);
 
   const translater = async (to: string, text: string) => {
     return await translate(text, to);
@@ -39,6 +62,7 @@ export default function App() {
             gzip: false,
           });
           const { data } = await worker.recognize(file);
+          setWords(data.text.replace(/\n+/g, " "))
           setText(await translater("ja", data.text.replace(/\n+/g, " ")));
           await worker.terminate();
         } catch (err) {
@@ -69,6 +93,7 @@ export default function App() {
         gzip: false,
       });
       const { data } = await worker.recognize(file);
+      setWords(data.text.replace(/\n+/g, " "))
       setText(await translater("ja", data.text.replace(/\n+/g, " ")));
       await worker.terminate();
     } catch (err) {
